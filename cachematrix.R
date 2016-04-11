@@ -1,11 +1,13 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions create a special form of a matrix object that 
+## stores the result of an inverse operation as well as the original data.
 
-## Write a short comment describing this function
+## The first function is used to create an object that stores a matrix 
+## value, and a list of method-like functions to get, modify, and set 
+## the matrix data with an external operation.
 
 makeCacheMatrix <- function(x = matrix()) {
     
-    i <- NULL ## Clear inverse value flag
+    i <- NULL ## Clear inverse value flag when initialized
     
     set <- function(y){ ## Method to set original matrix
         x <<- y ## Store a matrix in x
@@ -25,7 +27,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function takes a cached matrix object and performs an
+## inversation function, if it does not already exist, and writes
+## it back to the original object
 
 cacheSolve <- function(x, ...) {
     
